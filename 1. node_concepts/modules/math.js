@@ -14,37 +14,37 @@ function diff(a, b) {
 }
 
 // // Objects
-// var math = {};
-// math.sum = (a, b) => {
-//     return a + b;
-// };
+var math = {};
+math.sum = (a, b) => {
+    return a + b;
+};
 
-// math.div = (a, b) => {
-//     return a/b;
-// };
+math.div = (a, b) => {
+    return a/b;
+};
 
-// module.exports = {
-//   sum: (a, b) => {
-//     return a + b;
-//   },
-//   div: (a, b) => {
-//     return a / b;
-//   }
-// }
+module.exports = {
+  sum: (a, b) => {
+    return a + b;
+  },
+  div: (a, b) => {
+    return a / b;
+  }
+}
 
-// exports.sum = (a, b) => {
-//   return a + b;
-// };
+exports.sum = (a, b) => {
+  return a + b;
+};
 
-// exports.div = (a, b) => {
-//   return a / b;
-// }
+exports.div = (a, b) => {
+  return a / b;
+}
 
 // Export variables and functions
 module.exports = { total, sum, multiply, diff };
 
 // // Export objects
-// module.exports = math;
+module.exports = math;
 
 
 
