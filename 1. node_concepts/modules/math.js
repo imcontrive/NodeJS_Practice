@@ -47,5 +47,3 @@ module.exports = { total, sum, multiply, diff };
 module.exports = math;
 
 
-
-
