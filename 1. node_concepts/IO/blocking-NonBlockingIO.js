@@ -3,12 +3,12 @@
  * Blocking NodeJS method - Notice Sync at the end of the method, that means its blocking code.
  */
 const fs = require('fs');
-// const data = fs.readFileSync('./file.md'); // blocks here until file is read
+const data = fs.readFileSync('./file.md'); // blocks here until file is read
 
-// console.log(data);
+console.log(data);
 
 // // moreWork(); will run after console.log
-// console.log("additional data");
+console.log("additional data");
 
 /**
  * CodeBlock 2
@@ -21,7 +21,7 @@ fs.readFile('./file.md', (err, data) => {
   else console.log(data);
 });
 
-// moreWork(); will run before console.log
+// moreWork(); //will run before console.log
 console.log("additional data");
 
 
