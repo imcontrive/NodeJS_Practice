@@ -4,10 +4,10 @@ const port = process.env.PORT || 3000;
 const server = http.createServer((req, res) => { // request is an incoming message, ReadableStream
   const { method, url, headers } = req; // Node makes it easy to access the method and url
 
-  res.statusCode = 200;
+//   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
 
-  console.log(method, url, headers);
+  console.log(url);
 
   res.end('Hello World!\n');                            // response is a WriteableStream, 
 
@@ -23,7 +23,7 @@ server.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
 });
 
-// http.get('http://nodejs.org/dist/index.json', (res) => {
+// http.get('http://google.com', (res) => {
 //   res.on('data', (chunk) => {
 //     console.log(`BODY: ${chunk}`);
 //   });

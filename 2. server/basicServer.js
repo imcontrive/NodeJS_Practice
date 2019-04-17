@@ -4,24 +4,23 @@ const url = require('url');
 // define port for server to run
 const port = process.env.PORT || 4000;
 
-// define host
+// define host ?? this is optional 
 var hostname = 'http://localhost' || 'http://127.0.0.1'
 
-// Create Server using http's createServer method
+//Create Server using http's createServer method
 
-// http.createServer((req, res) => {
-// 	console.log(req.headers);
-// 	res.end(req.method);
-// }).listen(port, () => {
-// 	console.log('listening on port 4000');
-// });
+http.createServer((req, res) => {
+	console.log(req.headers);
+	res.end(req.method);
+}).listen(port, () => {
+	console.log('listening on port 4000');
+});
 
 // Instantiate Server
 const server = http.createServer();
 
 // Here server acts as an eventEmitter and emits 'request' method
 server.on('request', (req, res) => {
-  
   res.setHeader('Content-Type', 'text/plain');
   res.writeHead(200);
   // res.statusCode = 200;
