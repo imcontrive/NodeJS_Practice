@@ -48,14 +48,48 @@ var data = {
 // })
 
 // update files content
-fs.open(userPath + '/shubh.json', 'r+',(err,fd) => {
-  if(err) return console.error(err);
-  fs.writeFile(fd, JSON.stringify(data), (err) =>  {
-    if (err) return console.error(err);
-    console.log('File is created successfully.');
-  });
-  fs.close(fd,err => {
-    if (err) return console.error(err);
-    console.log(fd,err);    
-  })
+// fs.open(userPath + '/shubh.json', 'r+',(err,fd) => {
+//   if(err) return console.error(err);
+//   fs.writeFile(fd, JSON.stringify(data), (err) =>  {
+//     if (err) return console.error(err);
+//     console.log('File is created successfully.');
+//   });
+//   fs.close(fd,err => {
+//     if (err) return console.error(err);
+//     console.log(fd,err);    
+//   })
+// })
+
+
+//deleting content  from users file
+// fs.open(userPath + '/shubh.json', 'r+',(err,fd) => {
+  // if(err) return console.error(err);
+  // fs.ftruncate(fd, (err) => {
+  //   if (err) return console.error(err);
+  //   console.log('File is deleted successfully.');
+  // })
+  // fs.close(fd,err => {
+  //   if (err) return console.error(err);
+  //   console.log(fd,err);    
+  // })
+// })
+
+
+// delete file
+
+// fs.open(userPath + '/shubh.json', 'r+',(err,fd) => {
+  // if(err) return console.error(err);
+  // fs.unlink(user, (err) => {
+  //   if (err) return console.error(err);
+  //   console.log('File is deleted successfully.');
+  // })
+  // fs.close(fd,err => {
+  //   if (err) return console.error(err);
+  //   console.log(fd,err);    
+  // })
+// })
+
+fs.unlink(userPath + '/shubh.json', (err) => {
+  if (err) return console.error(err);
+  console.log('File is deleted successfully.');
 })
