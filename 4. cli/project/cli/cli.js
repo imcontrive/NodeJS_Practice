@@ -48,16 +48,7 @@ function center(string){
   return line;
  }
 //  verticle space
- function verSpace(string){
-  var line ="";
-  var len = string.length;
-  var width = process.stdout.columns -len;
-  var minispace = width/6;
-  for(var i =0 ; i< minispace ; i++){
-    line+=" ";
-  }
-  return line;
- }
+
 // objects for helpMenu 
 
 e.on('exit', (val) => {
